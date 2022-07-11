@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
-path = r"C:\Users\paras.chauhan\OneDrive - Mars Inc\Desktop\Agrocel\Stripping Plant\streamlit_App\Streamlit_Data.xlsx"
+path = r"Streamlit_Data.xlsx"
 
 st.set_page_config(page_title="Correlation Chart", page_icon=":bar_chart:", layout="wide")
 
