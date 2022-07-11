@@ -5,7 +5,7 @@ import streamlit as st
 
 path = r"Streamlit_Data.xlsx"
 
-st.set_page_config(page_title="Correlation Chart", page_icon=":bar_chart:", layout="long")
+st.set_page_config(page_title="Correlation Chart", page_icon=":bar_chart:", layout="wide")
 
 st.title("**Correlation Chart of S5 and S7 with Efficiency**", anchor=None)
 
