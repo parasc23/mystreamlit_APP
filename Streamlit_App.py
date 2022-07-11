@@ -9,7 +9,7 @@ st.set_page_config(page_title="Correlation Chart", page_icon=":bar_chart:", layo
 
 
 
-Plant = st.radio("**Choose Plant:**",('S5','S7'))
+Plant = st.radio("Choose Plant:",('S5','S7'))
 
 st.title(f"**Correlation Chart of {Plant} with Efficiency**", anchor=None)
 
