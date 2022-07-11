@@ -16,12 +16,13 @@ def get_data_from_excel(sheet):
 
 df = get_data_from_excel(sheet = Plant)
 
+date_set = sorted(date_list(df['Date'].unique()))
+
 st.sidebar.header("Date Filter")
 Dates = st.sidebar.multiselect(
     "Select the Date:",
-    options=sorted(df["Date"].unique()),
-    default=sorted(df["Date"].unique())
-)
+    options=date_set,
+    default=date_set)
 
 df_selection = df.query(
     "Date == @Dates"
