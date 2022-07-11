@@ -9,9 +9,10 @@ st.set_page_config(page_title="Correlation Chart", page_icon=":bar_chart:", layo
 
 st.title("**Correlation Chart of S5 and S7 with Efficiency**", anchor=None)
 
-Plant = st.radio("PLANT",('S5','S7'))
+Plant = st.radio("<b>Choose Plant<b>:",('S5','S7'))
 def get_data_from_excel(sheet):
     df = pd.read_excel(path,sheet_name=sheet,parse_dates=['Date'],na_filter=True)
+    df['Date'] = df['Date'].dt.date
     return df
 
 df = get_data_from_excel(sheet = Plant)
@@ -35,4 +36,3 @@ fig_corr_chart = px.bar(
     template="plotly_white",width=1200,height=800)
 
 st.plotly_chart(fig_corr_chart)
-st.dataframe(df_selection)
