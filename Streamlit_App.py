@@ -36,6 +36,7 @@ correlation_data = df_selection.corr()['Efficiency'][:-1]
 fig_corr_chart = px.bar(
     x = correlation_data,
     y=correlation_data.index,
-    template="plotly_white",width=1200,height=800)
+    template="plotly_white",width=1200,height=800,
+labels=dict(x="Efficiency", y="Features"))
 
 st.plotly_chart(fig_corr_chart)
