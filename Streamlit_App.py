@@ -5,7 +5,7 @@ import streamlit as st
 
 path = r"Streamlit_Data.xlsx"
 
-st.set_page_config(page_title="Correlation Chart", page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title="Heatmap", page_icon=":bar_chart:", layout="wide")
 
 
 
