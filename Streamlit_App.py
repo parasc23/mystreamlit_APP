@@ -33,7 +33,7 @@ df_selection = df.query(
 )
 
 correlation_data = df_selection.corr()
-fig = px.imshow(correlation_data, color_continuous_scale='RdBu_r', origin='lower')
+fig = px.imshow(correlation_data, color_continuous_scale='RdBu_r', origin='lower',width=1200,height=800,text_auto=True)
 # fig_corr_chart = px.bar(
 #     x = correlation_data,
 #     y=correlation_data.index,
