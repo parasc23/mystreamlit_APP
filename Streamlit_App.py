@@ -32,11 +32,12 @@ df_selection = df.query(
     "Date == @Dates"
 )
 
-correlation_data = df_selection.corr()['Efficiency'][:-1]
-fig_corr_chart = px.bar(
-    x = correlation_data,
-    y=correlation_data.index,
-    template="plotly_white",width=1200,height=800,
-labels=dict(x="Efficiency", y="Features"))
+correlation_data = df_selection.corr()
+fig = px.imshow(correlation_data, color_continuous_scale='RdBu_r', origin='lower')
+# fig_corr_chart = px.bar(
+#     x = correlation_data,
+#     y=correlation_data.index,
+#     template="plotly_white",width=1200,height=800,
+# labels=dict(x="Efficiency", y="Features"))
 
-st.plotly_chart(fig_corr_chart)
+st.plotly_chart(fig)
