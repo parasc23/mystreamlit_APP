@@ -34,6 +34,8 @@ df_selection = df.query(
 
 correlation_data = df_selection.corr()
 fig = px.imshow(correlation_data, color_continuous_scale='RdBu_r', origin='lower',width=1400,height=1200,text_auto=".2f")
+for i in range(len(fig.layout.annotations)):
+        fig.layout.annotations[i].font.size = 9
 # fig_corr_chart = px.bar(
 #     x = correlation_data,
 #     y=correlation_data.index,
