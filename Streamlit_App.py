@@ -11,7 +11,7 @@ st.set_page_config(page_title="Correlation Chart", page_icon=":bar_chart:", layo
 
 Plant = st.radio("Choose Plant:",('S5','S7'))
 
-st.title(f"**Correlation Chart of {Plant} with Efficiency**", anchor=None)
+st.title(f"**Correlation Chart of {Plant}**", anchor=None)
 
 def get_data_from_excel(sheet):
     df = pd.read_excel(path,sheet_name=sheet,parse_dates=['Date'],na_filter=True)
